@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Disease</title>
+    <style>
+        .custom-select {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* Adjust as needed */
+}
+
+.custom-select select {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+  appearance: none;
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.custom-select::after {
+  content: '\f0de'; /* Unicode for a down arrow or any other icon you want to use */
+  font-family: FontAwesome; /* You can use a different icon font or an image */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Optional: Style the dropdown options */
+.custom-select select option {
+  background-color: #fff;
+  color: #333;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#up{
+  
+    background: black;
+    color: bisque;
+    text-align: center;
+
+}
+#up-d{
+    background:#cfc3a3 ;
+    text-align: center;
+    color: #171612;
+ 
+}
+#custom-select{
+    text-align: center;
+}
+
+
+    </style>
+    <script>
+
+ 
+function action(dropdown)
+{
+    
+    var option_text = dropdown.options[dropdown.selectedIndex].text;
+    alert(option_text);
+    if (option_text== "Headache"){
+        window.location.assign("disease/headache.html");
+    }
+
+    else if(option_text=="Cough"){
+        window.location.assign("disease/cough.html");
+    }
+    else if(option_text=="Sore Throat"){
+        window.location.assign("disease/sorethroat.html");
+
+    }
+    else if(option_text=="Bloody Diarrhoea"){
+        window.location.assign("disease/bloodydiarrhoea.html");
+
+
+    }
+    else if(option_text=="Dehydration"){
+        window.location.assign("disease/dehydration.html");
+
+    }
+    else if(option_text=="Diabetes"){
+        window.location.assign("disease/diabetes.html");
+
+    }
+    else if(option_text=="Hairloss"){
+        window.location.assign("disease/hairloss.html");
+
+    }
+    else if(option_text=="Itching"){
+        window.location.assign("disease/itching.html");
+
+    }
+    else if(option_text=="Kidney Stones"){
+        window.location.assign("disease/kidneystones.html");
+
+    }
+    else if(option_text=="Nasal Block"){
+        window.location.assign("disease/nasalblock.html");
+
+    }
+    else if(option_text=="Anemia"){
+        window.location.assign("disease/anemia.html");
+    }
+    else if(option_text=="Fever"){
+        window.location.assign("disease/fever.html");
+
+    }
+    else if(option_text=="Intestinal Worms"){
+        window.location.assign("disease/intestinalworms.html");
+
+    }
+}
+</script>
+
+            
+
+</head>
+<body>
+<div id="up"><h2>Diseases</h2></div>
+<div id="up-d">Select Diseases From Below:</div>
+    <div id="custom-select" >
+        <select onchange="action(this)">
+            <option value="option1">Headache</option>
+            <option value="option2">Cough</option>
+            <option value="option3">Sore Throat</option>
+            <option value="option4">Bloody Diarrhoea</option>
+            <option value="option5">Dehydration</option>
+            <option value="option6">Diabetes</option>
+            <option value="option7">Hairloss</option>
+            <option value="option8">Itching</option>
+            <option value="option9">Kidney Stones</option>
+            <option value="option10">Nasal Block</option>
+            <option value="option11">Anemia</option>
+            <option value="option12">Fever</option>
+            <option value="option13">Intestinal Worms</option>
+        </select>
+    </div>
+</body>
+</html>
